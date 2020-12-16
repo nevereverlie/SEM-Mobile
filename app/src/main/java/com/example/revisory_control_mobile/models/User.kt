@@ -6,5 +6,6 @@ data class User(
     @SerializedName("userId") val userId: Int,
     @SerializedName("firstname") val firstname: String?,
     @SerializedName("lastname") val lastname: String?,
-    @SerializedName("userEmail") val userEmail: String?
+    @SerializedName("userEmail") val userEmail: String?,
+    @SerializedName("schedules") val schedules: List<Schedule>?
 )
