@@ -2,6 +2,8 @@ package com.example.revisory_control_mobile.repository
 
 import com.example.revisory_control_mobile.models.LoginRequest
 import com.example.revisory_control_mobile.models.RegisterRequest
+import com.example.revisory_control_mobile.models.User
+import io.reactivex.Single
 
 
 class UserRepository {
@@ -13,6 +15,9 @@ class UserRepository {
 
     fun registerUser(username: String, password: String, lastname: String, firstname: String) =
         apiService.registerUser(RegisterRequest(username, password, lastname, firstname))
+
+    fun getUsers(): Single<List<User>> =
+        apiService.getUsers()
 
     //fun getUser(): Single<List<User>> = apiService.getUser(ApiService.token)
 }

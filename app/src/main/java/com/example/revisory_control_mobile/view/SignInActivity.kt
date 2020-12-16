@@ -51,7 +51,7 @@ class SignInActivity : BaseActivity<SignInActivity, LoginPresenter>() {
     }
 
     private fun navigateToMainScreen() {
-        val intent = Intent(this, SignUpActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 }

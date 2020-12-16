@@ -3,6 +3,7 @@ package com.example.revisory_control_mobile.repository
 import com.example.revisory_control_mobile.models.LoginRequest
 import com.example.revisory_control_mobile.models.LoginResponse
 import com.example.revisory_control_mobile.models.RegisterRequest
+import com.example.revisory_control_mobile.models.User
 import io.reactivex.Completable
 import io.reactivex.Single
 import okhttp3.OkHttpClient
@@ -10,9 +11,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.http.Body
-import retrofit2.http.Headers
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiService {
     @Headers("Content-Type: application/json")
@@ -22,6 +21,9 @@ interface ApiService {
     @Headers("Content-Type: application/json")
     @POST("account/register")
     fun registerUser(@Body requestBody: RegisterRequest): Completable
+
+    @GET("users")
+    fun getUsers(): Single<List<User>>
 
 
     companion object {
