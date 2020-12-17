@@ -10,13 +10,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="78dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
+        android:layout_width="94dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.39"
+        app:srcCompat="@drawable/user" />
 
     <EditText
         android:id="@+id/tvFirstname"
@@ -26,6 +28,8 @@
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:background="#FFFFFF"
+        android:clickable="false"
+        android:editable="false"
         android:ems="10"
         android:hint="Ім'я"
         android:inputType="textPersonName"
@@ -44,6 +48,8 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
         android:background="#FFFFFF"
+        android:clickable="false"
+        android:editable="false"
         android:ems="10"
         android:hint="Ім'я"
         android:inputType="textPersonName"
@@ -61,6 +67,8 @@
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:background="#FFFFFF"
+        android:clickable="false"
+        android:editable="false"
         android:ems="10"
         android:hint="Ім'я"
         android:inputType="textPersonName"
@@ -71,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/tvSchedule"
+        android:id="@+id/tvDepartment"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="151dp"
         android:layout_height="36dp"
@@ -79,12 +87,47 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
         android:background="#FFFFFF"
+        android:clickable="false"
+        android:editable="false"
         android:ems="10"
-        android:hint="Робочі дні"
+        android:hint="@string/hint_department"
         android:inputType="textPersonName"
         android:singleLine="true"
-        android:text="Робочі дні"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvLastname"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+    <EditText
+        android:id="@+id/etDayLabel"
+        android:layout_width="88dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:duplicateParentState="false"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/tv_working_days"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/tvLastname" />
+
+    <EditText
+        android:id="@+id/etWorkingDays"
+        android:layout_width="193dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/etDayLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvLastname" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

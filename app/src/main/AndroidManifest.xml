@@ -27,6 +27,8 @@
 
         <activity android:name=".view.SignUpActivity" />
 
+        <activity android:name=".view.ProfileActivity" />
+
     </application>
 
 

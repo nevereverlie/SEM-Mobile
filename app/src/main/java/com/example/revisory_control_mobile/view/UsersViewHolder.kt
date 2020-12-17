@@ -2,10 +2,10 @@ package com.example.revisory_control_mobile.view
 
 import android.util.Log
 import android.view.View
-import com.example.revisory_control_mobile.models.Schedule
 import com.example.revisory_control_mobile.models.User
-import kotlinx.android.synthetic.main.employee_item.view.*
 import com.example.revisory_control_mobile.models.WeekDay
+import kotlinx.android.synthetic.main.employee_item.view.*
+import java.util.*
 
 class UsersViewHolder(view: View): BaseViewAdapter.ViewHolder<User>(view) {
     init {
@@ -17,17 +17,19 @@ class UsersViewHolder(view: View): BaseViewAdapter.ViewHolder<User>(view) {
         itemView.tvFirstname.setText(data.firstname)
         itemView.tvLastname.setText(data.lastname)
         itemView.tvEmail.setText(data.userEmail)
+        itemView.tvDepartment.setText(data.department?.departmentName)
 
         val workingDaysList: MutableList<String> = mutableListOf<String>()
 
-        Log.wtf((WeekDay.values()[6].ordinal + 1).toString(), (WeekDay.values()[6].ordinal + 1).toString())
-
         for (day in data?.schedules!!)
             if (day.weekDayId == (WeekDay.values()[day.weekDayId!! - 1].ordinal) + 1)
-                workingDaysList.add(WeekDay.values()[day.weekDayId!! - 1].name)
+                workingDaysList.add(WeekDay.values()[day.weekDayId!! - 1].printName())
 
         if (workingDaysList.isNotEmpty()) {
-            itemView.tvSchedule.setText(workingDaysList[0])
+            itemView.etWorkingDays.setText(workingDaysList.joinToString { day -> "$day" })
         }
+
+       Log.wtf("awdawd", Locale.getDefault().displayLanguage)
+
     }
 }

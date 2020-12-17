@@ -8,6 +8,7 @@ import android.os.Parcelable
 import android.widget.Toast
 import com.example.revisory_control_mobile.R
 import com.example.revisory_control_mobile.presenter.SignUpPresenter
+import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity() : BaseActivity<SignUpActivity, SignUpPresenter>(), Parcelable {
@@ -29,6 +30,11 @@ class SignUpActivity() : BaseActivity<SignUpActivity, SignUpPresenter>(), Parcel
                 tvRegisterFirstname.text.toString(),
                 tvRegisterLastname.text.toString()
             )
+        }
+
+        tvSignIn.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
         }
     }
 

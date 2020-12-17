@@ -25,6 +25,11 @@ interface ApiService {
     @GET("users")
     fun getUsers(): Single<List<User>>
 
+    @GET("users/{userId}")
+    fun getUser(
+        @Path("userId") userId: Int
+    ): Single<User>
+
 
     companion object {
 
