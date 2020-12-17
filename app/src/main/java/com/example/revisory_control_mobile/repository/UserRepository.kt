@@ -19,5 +19,8 @@ class UserRepository {
     fun getUsers(): Single<List<User>> =
         apiService.getUsers()
 
+    fun getUserById(userId: Int): Single<User> =
+        apiService.getUser(userId)
+
     //fun getUser(): Single<List<User>> = apiService.getUser(ApiService.token)
 }
