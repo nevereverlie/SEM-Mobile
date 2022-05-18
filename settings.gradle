@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Revisory-control-mobile"
+rootProject.name = "SEM-mobile"

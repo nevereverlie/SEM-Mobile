@@ -33,7 +33,7 @@ interface ApiService {
 
     companion object {
 
-        private const val BASE_URL = "https://revisory-control.azurewebsites.net/api/"
+        private const val BASE_URL = "https://sem-eu-west.azurewebsites.net/api/"
 
         var token: String = ""
             set(value) { field = "Bearer " + value }

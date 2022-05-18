@@ -1,2 +1,2 @@
-# Revisory-Control-Mobile
-Simple mobile app for RC project made with Kotlin
+# SEM-Mobile
+Simple mobile app for SEM - Smart Employee Management project made with Kotlin.

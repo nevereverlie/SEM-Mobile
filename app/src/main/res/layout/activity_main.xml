@@ -20,9 +20,10 @@
             android:id="@+id/ivEmployees"
             android:layout_width="50dp"
             android:layout_height="46dp"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginTop="8dp"
             android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.326"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_view" />
@@ -31,11 +32,11 @@
             android:id="@+id/ivProfile"
             android:layout_width="36dp"
             android:layout_height="28dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginLeft="72dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:background="#673AB7"
-            app:layout_constraintStart_toEndOf="@+id/ivEmployees"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.658"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_dialog_info" />
 
@@ -63,7 +64,7 @@
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/tvEmployees"
             app:layout_constraintTop_toBottomOf="@+id/ivProfile"
             app:layout_constraintVertical_bias="0.0" />
@@ -77,10 +78,9 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.006"
+        app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/employee_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
