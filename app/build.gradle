@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.revisory_control_mobile"
+        applicationId "com.example.sem_mobile"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
